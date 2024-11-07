@@ -230,17 +230,11 @@ s! {
     }
     pub struct stat {
         pub st_dev: ::dev_t,
-        #[cfg(not(emscripten_new_stat_abi))]
-        __st_dev_padding: ::c_int,
-        #[cfg(not(emscripten_new_stat_abi))]
-        __st_ino_truncated: ::c_long,
         pub st_mode: ::mode_t,
         pub st_nlink: ::nlink_t,
         pub st_uid: ::uid_t,
         pub st_gid: ::gid_t,
         pub st_rdev: ::dev_t,
-        #[cfg(not(emscripten_new_stat_abi))]
-        __st_rdev_padding: ::c_int,
         pub st_size: ::off_t,
         pub st_blksize: ::blksize_t,
         pub st_blocks: ::blkcnt_t,
